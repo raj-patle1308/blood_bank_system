@@ -1,54 +1,128 @@
-﻿bloodbankmanagement-master
 
-Username=admin
-Password=admin12345
+---
 
-Admin
-Create Admin account using following command
-*py manage.py createsuperuser
-After Login, can see Unit of blood of each blood group available, Number Of Donor, Number of blood request, Number of approved request, Total Unit of blood on Dashboard.
-Can View, Update, Delete Donor.
-Can View, Update, Delete Patient.
-Can View Donation Request made by donor and can approve or reject that request based on disease of donor.
-If Donation Request approved by admin then that unit of blood added to blood stock of that blood group.
-If Donation Request rejected by admin then 0 unit of blood added to stock.
-Can View Blood Request made by donor / patient and can approve or reject that request.
-If Blood Request approved by admin then that unit of blood reduced from blood stock of that blood group.
-If Blood Request rejected by admin then 0 unit of blood reduced from stock.
-Can see history of blood request.
-Can Update Unit Of Particular Blood Group.
+# 🩸 Blood Bank Management System
 
+Welcome to the **Blood Bank Management System**, a comprehensive web application designed to streamline the blood donation process and manage blood stocks efficiently. This application facilitates the interaction between donors, patients, and administrators, ensuring a smooth workflow for blood donations and requests.
 
+![Blood Bank Management System](https://github.com/user-attachments/assets/a7e30e5d-e570-4f16-9349-608562df2065)
 
+---
 
-Donor
-Donor can create account by providing basic details.
-After Login, Donor can donate blood, After approval from admin only, blood will be added to blood stock.
-Donor can see their donation history with status (Pending, Approved, Rejected).
-Donor can also request for blood from blood stock.
-Donor can see their blood request history with status.
-Donor can see number of blood request Made, Approved, Pending, Rejected by Admin on their dashboard.
-NOTE: Donor can donate blood and can also request for blood.
+## 🚀 Key Features
 
+### For Admin
+- **Admin Account Management**: Create admin accounts with the command:
+  ```bash
+  python manage.py createsuperuser
+  ```
+- **Dashboard Overview**: View critical statistics including:
+  - Units of blood available for each blood group
+  - Total number of donors
+  - Number of blood requests
+  - Number of approved requests
+  - Total units of blood available
+- **Donor Management**: View, update, or delete donor records.
+- **Patient Management**: View, update, or delete patient records.
+- **Donation Request Handling**: Review and manage donation requests made by donors. Approve or reject requests based on donor health status.
+  - Approved requests increase blood stock.
+  - Rejected requests do not affect stock.
+- **Blood Request Management**: Approve or reject blood requests from donors or patients, affecting blood stock accordingly.
+- **History Tracking**: Maintain a history of all blood requests.
+- **Stock Management**: Update units of specific blood groups as needed.
 
+### For Donors
+- **Account Creation**: Donors can create an account by providing basic details.
+- **Donation Management**: Donate blood and view donation history with approval status (Pending, Approved, Rejected).
+- **Blood Request**: Request blood from available stock and track request history with statuses.
 
+### For Patients
+- **Easy Signup**: Patients can create accounts without admin approval.
+- **Request Blood**: Patients can request specific blood groups and units, monitoring their request history.
 
-Patient
-Create account (No Approval Required By Admin, Can Login After Signup)
-After Login, Can see number of blood request Made, Approved, Pending, Rejected by Admin on their dashboard.
-Patient can request for blood of specific blood group and unit from blood stock.
-Patient can see their blood request history with status (Pending, Approved, Rejected).
-HOW TO RUN THIS PROJECT
-Install Python(3.7.6) (Dont Forget to Tick Add to Path while installing Python)
-Download This Project Zip Folder and Extract it
-Move to project folder in Terminal.
+---
 
+## 💻 How to Run This Project
 
-Then run following Commands :
-python -m pip install -r requirements. txt
-*py manage.py makemigrations
-*py manage.py migrate
-*py manage.py runserver
-Now enter following URL in Your Browser Installed On Your Pc
-http://127.0.0.1:8000/# blood_donation
+### Prerequisites
+- **Python** (Version: 3.7.6)
+  - **Note**: Remember to check "Add to PATH" during installation.
 
+### Installation Steps
+
+1. **Clone or Download the Project**
+
+2. **Navigate to the Project Directory**
+   ```bash
+   cd blood_bank_system
+   ```
+
+3. **Create a Virtual Environment**
+   Create a virtual environment to manage project dependencies:
+   ```bash
+   python -m venv venv
+   ```
+
+4. **Activate the Virtual Environment**
+   - For **Windows**:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - For **macOS/Linux**:
+     ```bash
+     source venv/bin/activate
+     ```
+
+5. **Install Dependencies**
+   Install the required Python packages:
+   ```bash
+   python -m pip install -r requirements.txt
+   ```
+
+6. **Run Database Migrations**
+   Apply migrations to set up your database:
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+7. **Start the Server**
+   Run the application:
+   ```bash
+   python manage.py runserver
+   ```
+
+8. **Access the Application**
+   Open your web browser and navigate to:
+   [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+---
+
+## 📜 Login Credentials
+- **Username**: `admin`
+- **Password**: `admin12345`
+
+---
+
+## 🛠️ Technologies Used
+- **Django**: For building the web application framework.
+- **SQLite**: For database management.
+- **HTML/CSS**: For front-end development.
+- **JavaScript**: For interactive features.
+
+---
+
+## 📷 Screenshots
+![2](https://github.com/user-attachments/assets/de8979da-32a9-42c0-a726-a0252a1e3940)
+![3](https://github.com/user-attachments/assets/0b1a43fb-16b0-4720-91df-ba30e69007b3)
+![4](https://github.com/user-attachments/assets/4e33410b-a348-42c0-91ce-f941718bd4be)
+![5](https://github.com/user-attachments/assets/870e3292-e4bb-4515-9847-34b95f2360e5)
+![6](https://github.com/user-attachments/assets/d4df00de-9df0-4b38-b824-28c8af3c37f6)
+
+---
+
+### 🌟 **Join Us in Saving Lives!** 🌟
+
+---
+
+Feel free to customize any parts further to suit your project specifics!
